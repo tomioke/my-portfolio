@@ -1,0 +1,23 @@
+Website dan materi yang menjadi acuan :
+
+1. Bootstrap
+https://getbootstrap.com/docs/5.0/
+
+2. Figma
+https://www.figma.com/
+
+3. Squoosh Image Converter
+https://squoosh.app/
+
+4. Waves Generator
+https://getwaves.io/
+
+5. Material Color
+https://material.io/
+
+6. Background Remover
+https://photoscissors.com/
+
+7. Materi dari Youtube
+https://www.youtube.com/watch?v=LkR-9Z1sle8&t=1485s
+
