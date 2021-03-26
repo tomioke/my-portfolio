@@ -13,6 +13,23 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>Portfolio Saya | Tomi Irvan Oktavianto</title>
+    <!-- Use JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+      function SubForm() {
+        $.ajax({
+          url: 'https://api.apispreadsheets.com/data/10053/',
+          type: 'post',
+          data: $('#myForm').serializeArray(),
+          success: function () {
+            alert('Data berhasil disubmit!');
+          },
+          error: function () {
+            alert('!Error!, data gagal disubmit!');
+          },
+        });
+      }
+    </script>
   </head>
   <body id="home">
     <!-- Start navbar -->
@@ -167,21 +184,21 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <form id="myForm">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input name="nama" type="text" class="form-control" id="name" aria-describedby="name" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" aria-describedby="email" />
+                <input name="email" type="text" class="form-control" id="email" aria-describedby="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea name="pesan" class="form-control" id="pesan" rows="3"></textarea>
               </div>
               <div class="d-grid gap-2 col-6 mx-auto">
-                <button type="button" class="btn btn-success btn-lg mt-3"><i class="bi bi-telegram"></i> Kirim</button>
+                <button type="button" onclick="SubForm()" class="btn btn-success btn-lg mt-3"><i class="bi bi-telegram"></i> Kirim</button>
               </div>
             </form>
           </div>
