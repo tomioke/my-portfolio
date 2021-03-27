@@ -4,17 +4,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
     <title>Portfolio Saya | Tomi Irvan Oktavianto</title>
     <!-- Use JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- Lightbox CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.css" rel="stylesheet" />
     <script>
       function SubForm() {
         $.ajax({
@@ -29,6 +29,12 @@
           },
         });
       }
+      window.addEventListener('load', function () {
+        baguetteBox.run('.gallery');
+      });
+      baguetteBox.run('.gallery', {
+        buttons: true,
+      });
     </script>
   </head>
   <body id="home">
@@ -115,48 +121,60 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="./images/gallery/mouse-1.jpg" class="card-img-top" alt="image-1" />
+            <div class="card gallery">
+              <a class="lightbox" href="./images/gallery/mouse-1.jpg">
+                <img src="./images/gallery/mouse-1.jpg" class="card-img-top" alt="image-1" />
+              </a>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="./images/gallery/mouse-2.jpg" class="card-img-top" alt="image-2" />
+            <div class="card gallery">
+              <a class="lightbox" href="./images/gallery/mouse-2.jpg">
+                <img src="./images/gallery/mouse-2.jpg" class="card-img-top" alt="image-2" />
+              </a>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="./images/gallery/mouse-3.jpg" class="card-img-top" alt="image-3" />
+            <div class="card gallery">
+              <a class="lightbox" href="./images/gallery/mouse-3.jpg">
+                <img src="./images/gallery/mouse-3.jpg" class="card-img-top" alt="image-3" />
+              </a>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="./images/gallery/mouse-4.jpg" class="card-img-top" alt="image-4" />
+            <div class="card gallery">
+              <a class="lightbox" href="./images/gallery/mouse-4.jpg">
+                <img src="./images/gallery/mouse-4.jpg" class="card-img-top" alt="image-4" />
+              </a>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="./images/gallery/mouse-5.jpg" class="card-img-top" alt="image-5" />
+            <div class="card gallery">
+              <a class="lightbox" href="./images/gallery/mouse-5.jpg">
+                <img src="./images/gallery/mouse-5.jpg" class="card-img-top" alt="image-5" />
+              </a>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="./images/gallery/mouse-6.jpg" class="card-img-top" alt="image-6" />
+            <div class="card gallery">
+              <a class="lightbox" href="./images/gallery/mouse-6.jpg">
+                <img src="./images/gallery/mouse-6.jpg" class="card-img-top" alt="image-6" />
+              </a>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -219,6 +237,11 @@
       <p>Created with <i class="bi bi-heart-fill" style="color: rgb(231, 15, 44)"></i> by <a class="text-white fw-bold" href="https://www.instagram.com/tomi_irvan/">Tomi Irvan</a></p>
     </footer>
     <!-- End Footer -->
+
+    <!-- Boostrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Lightbox CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.js"></script>
   </body>
 </html>
